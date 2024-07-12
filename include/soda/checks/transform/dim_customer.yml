@@ -1,0 +1,20 @@
+# dim_customer.yml
+
+# Checks for the dimension table `dim_customer`
+checks for dim_customer:
+  # Schema validation checks
+  - schema:
+      # Fail if required columns are missing or have incorrect types
+      fail:
+        when required column missing: 
+          [customer_id, country]
+        when wrong column type:
+          customer_id: text
+          country: character varying
+
+  # Data integrity checks
+  - duplicate_count(customer_id) = 0:
+      name: All customers are unique
+
+  - missing_count(customer_id) = 0:
+      name: All customers have a key

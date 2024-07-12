@@ -1,0 +1,15 @@
+# sources.yml
+# Version of the YAML file format
+version: 2
+
+# Define sources for dbt
+sources:
+  # Source configuration for the online_retail database
+  - name: online_retail
+    # Specify the database name (replace with your project ID)
+    database: josue
+
+    # List of tables to be included in dbt
+    tables:
+      - name: sales
+      - name: country

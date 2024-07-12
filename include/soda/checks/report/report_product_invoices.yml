@@ -1,0 +1,8 @@
+checks for report_product_invoices:
+  # Ensure all products have a stock code
+  - missing_count(stock_code) = 0:
+      name: All products have a stock code
+
+  # Ensure total quantity sold is greater than 0
+  - min(total_quantity_sold):
+      fail: when <= 0

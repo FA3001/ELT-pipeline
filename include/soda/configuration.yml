@@ -1,0 +1,16 @@
+# include/soda/configuration.yml
+
+data_source:
+  online_retail:
+    type: postgres
+    host: postgres2
+    port: 5432
+    username: josue
+    password: josue
+    database: josue
+    schema: public
+
+soda_cloud:
+  host: cloud.soda.io
+  api_key_id: 1767b86f-8d94-4ba8-90ff-bbcd5bd70cb7
+  api_key_secret: Ax5wg4mG3n6SQIhGhyF1AZ72QrxV83skk2pODvMmV0yO1vb7tbmbBg

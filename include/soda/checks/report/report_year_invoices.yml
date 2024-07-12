@@ -1,0 +1,4 @@
+checks for report_year_invoices:
+  # Ensure the number of invoices for a year is not negative
+  - min(num_invoices):
+      fail: when < 0

@@ -1,0 +1,8 @@
+checks for report_customer_invoices:
+  # Ensure all customers have a country specified
+  - missing_count(country) = 0:
+      name: All customers have a country
+
+  # Ensure total invoices are greater than 0
+  - min(total_invoices):
+      fail: when <= 0
