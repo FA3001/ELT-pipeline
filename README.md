@@ -8,7 +8,7 @@ The goal of this project is to create an end-to-end data pipeline from a Kaggle 
 - Orchestration: Apache Airflow will be used to automate and manage our data workflows, ensuring smooth and timely execution.
 
 # 🌟 System Architecture
-![Untitled Diagram drawio](https://github.com/user-attachments/assets/ea61e8c9-e5e1-4128-a5cc-bb28c6f56040)
+![image](https://github.com/user-attachments/assets/c8f8ef68-063a-487e-a65b-aef19b17cfb6)
 
 
 # 📁 Repository Structure
@@ -46,3 +46,45 @@ The goal of this project is to create an end-to-end data pipeline from a Kaggle 
 
 ## Data modeling
 ![image](https://github.com/user-attachments/assets/c4b5421f-84ad-42bd-9edf-103b642034f0)
+
+## 🚀 Getting Started
+1.  **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/FA3001/ELT-pipeline
+    ```
+2.  **Launch Docker**
+    ```bash
+    docker-compose up -d
+    ```
+3. **Download Data**
+   ```bash
+    /include/datasets/online_retail.csv
+   ```
+4. **API key for Soda Cloud**
+   Create an account on soda.io and generating the API key and it's associated secret, put them in
+   ```bash
+    include/soda/configuration.yml
+   ```
+5. **Initialize DBT configuration within the scheduler**
+   ```bash
+   docker ps
+   docker exec -it <scheduler_container_name or scheduler_container_id> bash
+    ```
+6. **Activate the dbt_venv**
+   ```bash
+    source dbt_venv/bin/activate
+   ```
+7. **Go to include/dbt**
+      ```bash
+    cd include/dbt
+   ```
+8. **Install DBT dependencies**
+   ```bash
+    dbt deps
+   ```
+9. **Access Airflow UI**: **Uesername and Pass: airflow**
+   ```bash
+    http://localhost:8080/
+   ```
+   
